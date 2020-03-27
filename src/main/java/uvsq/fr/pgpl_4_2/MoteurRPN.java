@@ -37,5 +37,21 @@ public class MoteurRPN extends Interpreteur {
 			else
 				throw new ArithmeticException("vos operande (pas asez d'operandes pour effectuer l'operation)");
 		}
+		// la liste des operandes
+		public Stack <Double> listeOperandes() {
+			//return operandes;
+			System.out.print("(");
+			for (int i = 0; i < operandes.size(); i++) {
+				if (i == operandes.size() - 1) {
+					System.out.print(operandes.get(i));
+					break;
+				}
+				System.out.print(operandes.get(i) + "|");
+			}
+			System.out.print(")");
+
+			return operandes;
+			
+		}
 
 }
